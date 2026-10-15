@@ -7,5 +7,6 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+    // Подключаем локальный файл из папки libs, интернету больше не нужно качать ничего!
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 }
